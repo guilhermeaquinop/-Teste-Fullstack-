@@ -1,1 +1,1 @@
-# -Teste-Fullstack-
+# Teste-Fullstack

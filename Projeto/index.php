@@ -67,15 +67,16 @@ $result = json_decode($response);
 							</div>
 							<div class="id">
 								<h4>Id:</h4>
-								<p><?=$Drinks -> idDrink?></p><!-- ID -->	
+								<p><?=$Drinks -> idDrink?></p> <!-- ID -->	
 							</div>
 						</div>
 						<div class="box-counter">
-								<button class="som">+</button>
-								<div class="view-counter">
-									<p class="counter" id="counter"></p>
-								</div>
 								<button class="sub">-</button>
+								<div class="view-counter">
+									<p class="counter" id="counter">0</p>
+								</div>
+								<button class="som">+</button>
+								<script src="/Teste-Fullstack/Js/counter.js"></script>
 						</div>
 					</div>
 			<?php } ?>

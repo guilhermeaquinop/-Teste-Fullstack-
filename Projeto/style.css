@@ -92,7 +92,7 @@ body{
 .infos{
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: first baseline;
     align-items: center;
     color: #eeeeee;     
     font-size: 12pt;
@@ -100,6 +100,8 @@ body{
     border-radius: 10px;
     border-bottom: 1px solid #eeeeee13; 
 }
+
+
 
 #strDrinkThumb{
     height: 150px;
@@ -124,6 +126,7 @@ body{
     display: flex;
     justify-content: end;
     width: 100%;
+    
 }
 
 .view-counter{
@@ -147,7 +150,10 @@ body{
     border: solid 1px #eeeeee21;
     border-radius: 5px;
     color: #eeeeee;
+    cursor: pointer;
 }
+
+
 
 /*ScrollBar*/
 

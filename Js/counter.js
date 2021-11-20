@@ -1,7 +1,7 @@
-var counter = document.querySelector('#counter')
-var som = document.querySelector('.som')
-var sub = document.querySelector('.sub')
-var count = 0
+let counter = document.querySelector('#counter')
+let som = document.querySelector('.som')
+let sub = document.querySelector('.sub')
+let count = 0
 
 som.addEventListener('click',  () =>{
     count++

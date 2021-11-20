@@ -70,6 +70,13 @@ $result = json_decode($response);
 								<p><?=$Drinks -> idDrink?></p><!-- ID -->	
 							</div>
 						</div>
+						<div class="box-counter">
+								<button class="som">+</button>
+								<div class="view-counter">
+									<p class="counter" id="counter"></p>
+								</div>
+								<button class="sub">-</button>
+						</div>
 					</div>
 			<?php } ?>
 			<!-- Código PHP -->	

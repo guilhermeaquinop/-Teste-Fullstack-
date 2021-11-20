@@ -25,6 +25,12 @@ body{
     color: #ffff;
 }
 
+#drinkPng{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
 /*Container*/
 
 .container{
@@ -36,13 +42,13 @@ body{
     width: 100%;
 }
 
-/*Names*/                                                                   
+/*Section-Names*/                                                                   
 
-.box-names{
+.section-names{
     text-align: center;
     background: #393E46;  
     width: 300px;
-    height: 550px;
+    height: 525px;
     margin-right: 15px;
     border-radius: 5px;
     overflow: auto;
@@ -70,15 +76,15 @@ body{
     transition: all .4s ease-in-out;
 }
 
-/*Images*/
+/*Section-Infos*/
 
-.box-infos{
+.section-infos{
     display: flex;
     flex-direction: column;
     justify-content: start;
     background: #393E46;
     width: 700px;
-    height: 550px;
+    height: 525px;
     border-radius: 5px;
     overflow: auto;
 }
@@ -95,6 +101,13 @@ body{
     border-bottom: 1px solid #eeeeee13; 
 }
 
+#strDrinkThumb{
+    height: 150px;
+    width: 150px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.35);
+}
+
 .text{
     display: flex;
     flex-direction: column;
@@ -105,12 +118,7 @@ body{
     margin-top: 20px;
 }
 
-img{
-    height: 150px;
-    width: 150px;
-    border-radius: 15px;
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.35);
-}
+/*ScrollBar*/
 
 *::-webkit-scrollbar {
     width: 7px;               

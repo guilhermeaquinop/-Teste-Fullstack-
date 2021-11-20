@@ -35,27 +35,30 @@ $result = json_decode($response);
 <body>
 	<header class="title"> 
 		<h3>Drinks</h3>
+		<div>
+			<img src="/Teste-Fullstack/images/drink.png" alt="Drink" id="drinkPng">
+		</div> 
 	</header>
 	<main class="container">
-		<div class="box-names">
+		<div class="section-names">
 			<!-- Código PHP: Gera botões com o nome de cada Drink -->
 			<?php 
 				foreach ($result->drinks as $Drinks) {
 			?>
-					<div class="fName">
+					<div>
 						<input class="button-name" type="submit" value="<?= $Drinks->strDrink ?>">
 					</div>
 			<?php } ?>
 			<!-- Código PHP -->			
 		</div>
-		<div class="box-infos">
+		<div class="section-infos">
 			<!-- Código PHP: Requisição da imagens, nomes e ID dos Drinks -->
 			<?php
 				foreach ($result->drinks as $Drinks) {
 			?>
 					<div class="infos">
 						<div class="image">
-							<img src="<?= $Drinks->strDrinkThumb?>"> <!-- Imagens -->	
+							<img src="<?= $Drinks->strDrinkThumb?>" id="strDrinkThumb"> <!-- Imagens -->	
 						</div>
 						<div class="text">
 							<div class="name">

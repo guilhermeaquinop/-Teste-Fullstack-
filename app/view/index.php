@@ -1,25 +1,5 @@
-<?php /* Código API */ 
-
-$curl = curl_init();
-
-curl_setopt_array($curl, [
-	CURLOPT_URL => "https://the-cocktail-db.p.rapidapi.com/filter.php?i=Gin",
-	CURLOPT_RETURNTRANSFER => true,
-	CURLOPT_FOLLOWLOCATION => true,
-	CURLOPT_ENCODING => "",
-	CURLOPT_MAXREDIRS => 10,
-	CURLOPT_TIMEOUT => 30,
-	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	CURLOPT_CUSTOMREQUEST => "GET",
-	CURLOPT_HTTPHEADER => [
-		"x-rapidapi-host: the-cocktail-db.p.rapidapi.com",
-		"x-rapidapi-key: 09d8e86b69msh367d3917d7092d8p152d35jsnbed02402c430"
-	],
-]);
-
-$response = (curl_exec($curl));
-$result = json_decode($response);
-
+<?php
+include_once '/laragon/www/teste-fullstack/app/controllers/api_drinks.php';
 ?>
 
 <!DOCTYPE html>
@@ -29,14 +9,14 @@ $result = json_decode($response);
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/Teste-Fullstack/app/index.css">
 	<title>Drinks</title>
 	</head>
 <body>
 	<header class="title"> 
 		<h3>Drinks</h3>
 		<div>
-			<img src="/Teste-Fullstack/images/drink.png" alt="Drink" id="drinkPng">
+			<img src="/Teste-Fullstack/assets/drink.png" alt="Drink" id="drinkPng">
 		</div> 
 	</header>
 	<main class="container">
@@ -69,14 +49,6 @@ $result = json_decode($response);
 								<h4>Id:</h4>
 								<p><?=$Drinks -> idDrink?></p> <!-- ID -->	
 							</div>
-						</div>
-						<div class="box-counter">
-								<button class="sub">-</button>
-								<div class="view-counter">
-									<p class="counter" id="counter">0</p>
-								</div>
-								<button class="som">+</button>
-								<script src="/Teste-Fullstack/Js/counter.js"></script>
 						</div>
 					</div>
 			<?php } ?>

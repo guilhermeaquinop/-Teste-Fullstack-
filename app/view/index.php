@@ -11,49 +11,50 @@ include_once '/laragon/www/teste-fullstack/app/controllers/api_drinks.php';
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/Teste-Fullstack/app/index.css">
 	<title>Drinks</title>
-	</head>
+</head>
+
 <body>
-	<header class="title"> 
-		<h3>Drinks</h3>
-		<div>
-			<img src="/Teste-Fullstack/assets/drink.png" alt="Drink" id="drinkPng">
-		</div> 
-	</header>
-	<main class="container">
-		<div class="section-names">
-			<!-- Código PHP: Gera botões com o nome de cada Drink -->
-			<?php 
-				foreach ($result->drinks as $Drinks) {
-			?>
-					<div>
-						<input class="button-name" type="submit" value="<?= $Drinks->strDrink ?>">
-					</div>
-			<?php } ?>
-			<!-- Código PHP -->			
+	<main>
+		<div class="menu">
+			<div class="menu-title">
+				<span>Drinks</span>
+			</div>
+
+			<div class="menu-options">
+				<div class="menu-options-container">
+					<span>Cardápio</span>
+				</div>
+				<div class="menu-options-container">
+					<span>Buscar</span>
+				</div>
+			</div>
+
+			<div class="menu-footer">
+				<a href="#">Sobre</a>
+			</div>
 		</div>
-		<div class="section-infos">
-			<!-- Código PHP: Requisição da imagens, nomes e ID dos Drinks -->
-			<?php
+		<div class="cardapio">
+			<div class="cardapio-container">
+				<!-- Código PHP: Requisição da imagens, nomes e ID dos Drinks -->
+				<?php
 				foreach ($result->drinks as $Drinks) {
-			?>
-					<div class="infos">
-						<div class="image">
-							<img src="<?= $Drinks->strDrinkThumb?>" id="strDrinkThumb"> <!-- Imagens -->	
+				?>
+					<div class="cardapio-drinks">
+						<div class="cardapio-drinks-thumb">
+							<img src="<?= $Drinks->strDrinkThumb ?>" id="cardapio-drinks-image"> <!-- Imagens -->
 						</div>
-						<div class="text">
-							<div class="name">
-								<h4>Name:</h4>
-								<p><?=$Drinks -> strDrink?></p> <!-- Nome  -->	
-							</div>
-							<div class="id">
-								<h4>Id:</h4>
-								<p><?=$Drinks -> idDrink?></p> <!-- ID -->	
-							</div>
+						<div class="cardapio-drinks-texts">
+							<p><?= $Drinks->strDrink ?></p>
+							<p>ID:&nbsp;<?= $Drinks->idDrink ?></p>
 						</div>
 					</div>
-			<?php } ?>
-			<!-- Código PHP -->	
+				<?php } ?>
+			</div>
+		
+		<!-- Código PHP -->
+		</div>
 		</div>
 	</main>
 </body>
+
 </html>
